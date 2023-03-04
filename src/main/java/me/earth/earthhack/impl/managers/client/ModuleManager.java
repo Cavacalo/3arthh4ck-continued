@@ -23,9 +23,6 @@ import me.earth.earthhack.impl.modules.client.management.Management;
 import me.earth.earthhack.impl.modules.client.media.Media;
 import me.earth.earthhack.impl.modules.client.nospoof.NoSpoof;
 import me.earth.earthhack.impl.modules.client.notifications.Notifications;
-import me.earth.earthhack.impl.modules.client.pbgui.PbGui;
-import me.earth.earthhack.impl.modules.client.pbteleport.PbTeleport;
-import me.earth.earthhack.impl.modules.client.pingbypass.PingBypassModule;
 import me.earth.earthhack.impl.modules.client.rotationbypass.Compatibility;
 import me.earth.earthhack.impl.modules.client.safety.Safety;
 import me.earth.earthhack.impl.modules.client.server.ServerModule;
@@ -203,8 +200,6 @@ public class ModuleManager extends IterationRegister<Module>
         this.forceRegister(new Compatibility());
         this.forceRegister(new Safety());
         this.forceRegister(new ServerModule());
-        this.forceRegister(new PbGui());
-        this.forceRegister(new PbTeleport());
         this.forceRegister(new SettingsModule());
         this.forceRegister(new TabModule());
         this.forceRegister(new Media());
@@ -364,8 +359,6 @@ public class ModuleManager extends IterationRegister<Module>
         this.forceRegister(new ItemChams());
         this.forceRegister(new Ambience());
         this.forceRegister(new HitEffects());
-
-        this.forceRegister(new PingBypassModule());
 
         Bus.EVENT_BUS.post(new PostInitEvent());
     }
